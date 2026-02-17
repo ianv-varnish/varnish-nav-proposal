@@ -91,6 +91,31 @@
         .pillar-box { background: #f4f8fb; padding: 12px; border-radius: 4px; border-left: 3px solid var(--accent-blue); }
         .btn-trial { background-color: var(--varnish-blue); color: var(--white); padding: 10px 22px; border-radius: 4px; font-weight: 600; text-decoration: none; font-size: 14px; margin-left: auto; transition: background 0.2s; }
         .btn-trial:hover { background-color: var(--accent-blue); }
+        /* Secondary Button: "Talk to an expert" */
+.btn-secondary {
+    border: 1px solid var(--accent-blue);
+    color: var(--accent-blue);
+    padding: 9px 18px;
+    border-radius: 4px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 13px;
+    transition: all 0.2s;
+    margin-right: 12px; /* Spacing between buttons */
+}
+
+.btn-secondary:hover {
+    background-color: rgba(0, 163, 224, 0.1);
+    color: var(--white);
+    border-color: var(--white);
+}
+
+/* Ensure the actions container aligns them correctly */
+.actions {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
     </style>
 </head>
 <body>
@@ -226,8 +251,10 @@
 
                
             </ul>
-            <a href="#" class="btn-trial">Try Varnish Free</a>
-        </div>
+<div class="actions">
+    <a href="#" class="btn-secondary">Talk to an expert</a>
+    <a href="#" class="btn-trial">Try Varnish Free</a>
+</div>
     </nav>
 
     <div style="padding: 100px 5%; text-align: center;">
