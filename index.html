@@ -1,267 +1,146 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2487.6">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-  </style>
+    <meta charset="UTF-8">
+    <title>Varnish Total Edge Platform - Centered Navigation</title>
+    <style>
+        :root {
+            --varnish-dark: #001226;
+            --varnish-blue: #0065a3;
+            --accent-blue: #00a3e0;
+            --text-main: #333;
+            --text-sub: #666;
+            --white: #ffffff;
+            --utility-gray: rgba(255, 255, 255, 0.7);
+            --max-width: 1200px;
+        }
+
+        body { 
+            font-family: 'Inter', -apple-system, sans-serif; 
+            margin: 0; 
+            background-color: #f0f2f5; 
+            font-size: 16px; /* Global increase */
+        }
+
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+
+        .utility-bar {
+            background-color: var(--varnish-dark);
+            height: 35px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .utility-bar .container { justify-content: flex-end; }
+        .utility-links { display: flex; gap: 20px; list-style: none; margin: 0; padding: 0; }
+        .utility-links a { color: var(--utility-gray); text-decoration: none; font-size: 13px; }
+        .utility-links a:hover { color: var(--white); }
+
+        .navbar {
+            background-color: var(--varnish-dark);
+            height: 75px;
+            position: relative;
+            z-index: 1000;
+        }
+        .navbar .container { justify-content: flex-start; }
+        
+        .logo { color: var(--white); font-weight: 800; font-size: 24px; text-decoration: none; margin-right: 40px; }
+        .nav-links { display: flex; list-style: none; margin: 0; padding: 0; height: 100%; }
+        
+        .nav-item { position: relative; height: 100%; display: flex; align-items: center; margin-right: 20px; }
+        .nav-link { color: var(--white); text-decoration: none; font-size: 15px; font-weight: 500; cursor: pointer; white-space: nowrap; }
+
+        .mega-menu {
+            display: none;
+            position: absolute;
+            top: 75px;
+            left: 0; 
+            background: var(--white);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+            padding: 30px;
+            box-sizing: border-box;
+            border-top: 3px solid var(--accent-blue);
+            border-radius: 0 4px 4px 4px;
+            z-index: 1100;
+        }
+
+        .nav-item.align-right .mega-menu {
+            left: auto;
+            right: 0;
+            border-radius: 4px 0 4px 4px;
+        }
+
+        .nav-item:hover .mega-menu { display: grid; }
+        .nav-item:hover .nav-link { color: var(--accent-blue); }
+
+        .menu-4-col { width: 950px; grid-template-columns: repeat(4, 1fr); gap: 25px; }
+        .menu-3-col { width: 850px; grid-template-columns: repeat(3, 1fr); gap: 25px; }
+        .menu-2-col { width: 550px; grid-template-columns: repeat(2, 1fr); gap: 25px; }
+
+        .col h4 { font-size: 12px; color: #999; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 15px 0; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        .item { display: block; text-decoration: none; margin-bottom: 18px; }
+        .item strong { display: block; color: var(--varnish-dark); font-size: 16px; margin-bottom: 4px; }
+        .item span { display: block; color: var(--text-sub); font-size: 13.5px; line-height: 1.5; }
+        .item:hover strong { color: var(--varnish-blue); text-decoration: underline; }
+
+        .pillar-box { background: #f4f8fb; padding: 12px; border-radius: 4px; border-left: 3px solid var(--accent-blue); }
+        .btn-trial { background-color: var(--varnish-blue); color: var(--white); padding: 10px 22px; border-radius: 4px; font-weight: 600; text-decoration: none; font-size: 14px; margin-left: auto; transition: background 0.2s; }
+        .btn-trial:hover { background-color: var(--accent-blue); }
+    </style>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="en"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Varnish Total Edge Platform - Centered Navigation&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>:root {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>--varnish-dark: #001226;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>--varnish-blue: #0065a3;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>--accent-blue: #00a3e0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>--text-main: #333;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>--text-sub: #666;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>--white: #ffffff;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>--utility-gray: rgba(255, 255, 255, 0.7);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>--max-width: 1200px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>body { font-family: 'Inter', -apple-system, sans-serif; margin: 0; background-color: #f0f2f5; }</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.container {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>max-width: var(--max-width);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin: 0 auto;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>height: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.utility-bar {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: var(--varnish-dark);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>height: 35px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-bottom: 1px solid rgba(255, 255, 255, 0.1);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.utility-bar .container { justify-content: flex-end; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.utility-links { display: flex; gap: 20px; list-style: none; margin: 0; padding: 0; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.utility-links a { color: var(--utility-gray); text-decoration: none; font-size: 12px; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.utility-links a:hover { color: var(--white); }</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.navbar {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: var(--varnish-dark);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>height: 70px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>position: relative;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>z-index: 1000;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.navbar .container { justify-content: flex-start; }</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.logo { color: var(--white); font-weight: 800; font-size: 22px; text-decoration: none; margin-right: 40px; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.nav-links { display: flex; list-style: none; margin: 0; padding: 0; height: 100%; }</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.nav-item { position: relative; height: 100%; display: flex; align-items: center; margin-right: 20px; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.nav-link { color: var(--white); text-decoration: none; font-size: 13.5px; font-weight: 500; cursor: pointer; white-space: nowrap; }</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.mega-menu {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: none;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>position: absolute;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>top: 70px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>left: 0;<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: var(--white);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 15px 40px rgba(0,0,0,0.2);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 30px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>box-sizing: border-box;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-top: 3px solid var(--accent-blue);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 0 4px 4px 4px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>z-index: 1100;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.nav-item.align-right .mega-menu {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>left: auto;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>right: 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 4px 0 4px 4px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.nav-item:hover .mega-menu { display: grid; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.nav-item:hover .nav-link { color: var(--accent-blue); }</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.menu-4-col { width: 950px; grid-template-columns: repeat(4, 1fr); gap: 25px; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.menu-3-col { width: 850px; grid-template-columns: repeat(3, 1fr); gap: 25px; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.menu-2-col { width: 550px; grid-template-columns: repeat(2, 1fr); gap: 25px; }</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.col h4 { font-size: 11px; color: #999; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 15px 0; border-bottom: 1px solid #eee; padding-bottom: 5px; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.item { display: block; text-decoration: none; margin-bottom: 15px; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.item strong { display: block; color: var(--varnish-dark); font-size: 14px; margin-bottom: 2px; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.item span { display: block; color: var(--text-sub); font-size: 11.5px; line-height: 1.4; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.item:hover strong { color: var(--varnish-blue); text-decoration: underline; }</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.pillar-box { background: #f4f8fb; padding: 12px; border-radius: 4px; border-left: 3px solid var(--accent-blue); }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.btn-trial { background-color: var(--varnish-blue); color: var(--white); padding: 9px 18px; border-radius: 4px; font-weight: 600; text-decoration: none; font-size: 13px; margin-left: auto; transition: background 0.2s; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.btn-trial:hover { background-color: var(--accent-blue); }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="utility-bar"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;ul class="utility-links"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;&lt;a href="#"&gt;en-US 🌐&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;&lt;a href="#"&gt;Contact us&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;&lt;a href="#"&gt;Blog&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;&lt;a href="#"&gt;Developer Portal&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;nav class="navbar"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;a href="#" class="logo"&gt;VARNISH&lt;/a&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;ul class="nav-links"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li class="nav-item"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="nav-link"&gt;Why Varnish? ▾&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="mega-menu menu-4-col"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="col"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;h4&gt;Company&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;a href="#" class="item"&gt;&lt;strong&gt;About Us&lt;/strong&gt;&lt;span&gt;Mission, leadership &amp; history.&lt;/span&gt;&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;a href="#" class="item"&gt;&lt;strong&gt;Our Technology&lt;/strong&gt;&lt;span&gt;High-performance architecture &amp; VCL.&lt;/span&gt;&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;a href="#" class="item"&gt;&lt;strong&gt;Partners&lt;/strong&gt;&lt;span&gt;Work with us.&lt;/span&gt;&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="col"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;h4&gt;Market Proof&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;a href="#" class="item"&gt;&lt;strong&gt;Customer Stories&lt;/strong&gt;&lt;span&gt;Success in Streaming, Retail &amp; Telecoms.&lt;/span&gt;&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="col"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;h4&gt;Connect&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;a href="#" class="item"&gt;&lt;strong&gt;News &amp; Press&lt;/strong&gt;&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;a href="#" class="item"&gt;&lt;strong&gt;Events&lt;/strong&gt;&lt;span&gt;Upcoming summits &amp; webinars.&lt;/span&gt;&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;a href="#" class="item"&gt;&lt;strong&gt;Careers&lt;/strong&gt;&lt;span&gt;Building the future of the edge.&lt;/span&gt;&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/li&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li class="nav-item"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="nav-link"&gt;Products &amp; Services ▾&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="mega-menu menu-3-col"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="col"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;h4&gt;Software&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;a href="#" class="item"&gt;&lt;strong&gt;Varnish Enterprise&lt;/strong&gt;&lt;span&gt;The foundational caching engine.&lt;/span&gt;&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;a href="#" class="item"&gt;&lt;strong&gt;Varnish Controller&lt;/strong&gt;&lt;span&gt;The robust GUI for administration and observability.&lt;/span&gt;&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;a href="#" class="item"&gt;&lt;strong&gt;Varnish Traffic Router&lt;/strong&gt;&lt;span&gt;Advanced request routing and global load balancing.&lt;/span&gt;&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="col"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;h4&gt;Managed &amp; SaaS&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;a href="https://varnish-cdn.com" target="_blank" class="item"&gt;&lt;strong&gt;Varnish CDN ↗&lt;/strong&gt;&lt;span&gt;Fully managed European CDN.&lt;/span&gt;&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;a href="https://orastreaming.com" target="_blank" class="item"&gt;&lt;strong&gt;Ora Streaming ↗&lt;/strong&gt;&lt;span&gt;Private CDN-as-a-Service for streaming.&lt;/span&gt;&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;a href="https://www.varnish-software.com/orca" target="_blank" class="item"&gt;&lt;strong&gt;Artifact Delivery ↗&lt;/strong&gt;&lt;span&gt;Virtual Registry Manager.&lt;/span&gt;&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="col"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;h4&gt;Platform Pillars&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="pillar-box"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;a href="#" class="item"&gt;&lt;strong&gt;Security&lt;/strong&gt;&lt;span&gt;WAF, DDoS protection, and origin shielding.&lt;/span&gt;&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;a href="#" class="item"&gt;&lt;strong&gt;Edge Compute&lt;/strong&gt;&lt;span&gt;Programmable logic and real-time execution.&lt;/span&gt;&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;a href="#" class="item"&gt;&lt;strong&gt;Observability&lt;/strong&gt;&lt;span&gt;Real-time traffic insights, logging, and performance metrics.&lt;/span&gt;&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/li&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li class="nav-item"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="nav-link"&gt;Use Cases ▾&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="mega-menu menu-3-col"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="col"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;h4&gt;Web &amp; API&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;a href="#" class="item"&gt;&lt;strong&gt;Web Application Acceleration&lt;/strong&gt;&lt;span&gt;Speeding up dynamic sites and apps.&lt;/span&gt;&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;a href="#" class="item"&gt;&lt;strong&gt;API Acceleration&lt;/strong&gt;&lt;span&gt;Reducing latency for REST/JSON endpoints.&lt;/span&gt;&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;a href="#" class="item"&gt;&lt;strong&gt;Web Application Security&lt;/strong&gt;&lt;span&gt;Edge-based protection (WAF).&lt;/span&gt;&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;a href="#" class="item"&gt;&lt;strong&gt;Origin Security&lt;/strong&gt;&lt;span&gt;Preventing backend overload and direct attacks.&lt;/span&gt;&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;a href="#" class="item"&gt;&lt;strong&gt;eCommerce &amp; CMS&lt;/strong&gt;&lt;span&gt;High-speed delivery for retail platforms.&lt;/span&gt;&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="col"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;h4&gt;Content Delivery&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;a href="#" class="item"&gt;&lt;strong&gt;Origin Shield&lt;/strong&gt;&lt;span&gt;Protecting backends from "the thundering herd".&lt;/span&gt;&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;a href="#" class="item"&gt;&lt;strong&gt;Private CDN&lt;/strong&gt;&lt;span&gt;Dedicated global caching infrastructure.&lt;/span&gt;&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;a href="#" class="item"&gt;&lt;strong&gt;Streaming&lt;/strong&gt;&lt;span&gt;Scalable delivery for live and on-demand video.&lt;/span&gt;&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;a href="#" class="item"&gt;&lt;strong&gt;Edge Delivery &amp; Compute&lt;/strong&gt;&lt;span&gt;Moving logic and processing to the network edge.&lt;/span&gt;&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="col"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;h4&gt;Data&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;a href="#" class="item"&gt;&lt;strong&gt;Data Pipeline Accelerator&lt;/strong&gt;&lt;span&gt;Caching and routing for data-heavy streams.&lt;/span&gt;&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;a href="#" class="item"&gt;&lt;strong&gt;Repository &amp; Artifact Caching&lt;/strong&gt;&lt;span&gt;Speeding up CI/CD and software repos.&lt;/span&gt;&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;a href="#" class="item"&gt;&lt;strong&gt;S3 &amp; Object Storage&lt;/strong&gt;&lt;span&gt;Optimizing cloud storage and reducing egress fees.&lt;/span&gt;&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/li&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li class="nav-item"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="nav-link"&gt;Open Source ▾&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="mega-menu menu-2-col"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="col"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;h4&gt;The Core&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;a href="https://varnish.org" target="_blank" class="item"&gt;&lt;strong&gt;Varnish Cache ↗&lt;/strong&gt;&lt;span&gt;The open source HTTP accelerator.&lt;/span&gt;&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;a href="#" class="item"&gt;&lt;strong&gt;VMODs Directory&lt;/strong&gt;&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="col"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;h4&gt;Engage&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;a href="#" class="item"&gt;&lt;strong&gt;GitHub Repository&lt;/strong&gt;&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;a href="#" class="item"&gt;&lt;strong&gt;Community Forums&lt;/strong&gt;&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/li&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li class="nav-item"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="nav-link"&gt;Learn ▾&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="mega-menu menu-3-col"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="col"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;h4&gt;Documentation&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;a href="#" class="item"&gt;&lt;strong&gt;Technical Docs&lt;/strong&gt;&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;a href="#" class="item"&gt;&lt;strong&gt;The Varnish Book&lt;/strong&gt;&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="col"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;h4&gt;Education&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;a href="#" class="item"&gt;&lt;strong&gt;Developer Portal&lt;/strong&gt;&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;a href="#" class="item"&gt;&lt;strong&gt;Training&lt;/strong&gt;&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;a href="#" class="item"&gt;&lt;strong&gt;Glossary&lt;/strong&gt;&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="col"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;h4&gt;Resources&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;a href="#" class="item"&gt;&lt;strong&gt;Blog&lt;/strong&gt;&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;a href="#" class="item"&gt;&lt;strong&gt;Case Studies&lt;/strong&gt;&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;a href="#" class="item"&gt;&lt;strong&gt;Webinars&lt;/strong&gt;&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;a href="#" class="item"&gt;&lt;strong&gt;White Papers&lt;/strong&gt;&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/li&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li class="nav-item align-right"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="nav-link"&gt;Support ▾&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="mega-menu menu-2-col"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="col"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;h4&gt;Support Plans&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;a href="#" class="item"&gt;&lt;strong&gt;Plan Overview&lt;/strong&gt;&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;a href="#" class="item"&gt;&lt;strong&gt;Managed Services&lt;/strong&gt;&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;a href="#" class="item"&gt;&lt;strong&gt;Contact Support&lt;/strong&gt;&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="col"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;h4&gt;Technical Services&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;a href="#" class="item"&gt;&lt;strong&gt;Professional Services&lt;/strong&gt;&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/li&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li class="nav-item"&gt;&lt;a href="#" class="nav-link"&gt;Pricing&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;a href="#" class="btn-trial"&gt;Try Varnish Free&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/nav&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div style="padding: 100px 5%; text-align: center;"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h1&gt;Web Nav Draft&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
-</body>
-</html>
+
+    <div class="utility-bar">
+        <div class="container">
+            <ul class="utility-links">
+                <li><a href="#">en-US 🌐</a></li>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Developer Portal</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">VARNISH</a>
+            <ul class="nav-links">
+                <li class="nav-item">
+                    <span class="nav-link">Why Varnish? ▾</span>
+                    <div class="mega-menu menu-4-col">
+                        <div class="col">
+                            <h4>Company</h4>
+                            <a href="#" class="item"><strong>About Us</strong><span>Mission, leadership & history.</span></a>
+                            <a href="#" class="item"><strong>Our Technology</strong><span>High-performance architecture & VCL.</span></a>
+                            <a href="#" class="item"><strong>Partners</strong><span>Work with us.</span></a>
+                        </div>
+                        <div class="col">
+                            <h4>Market Proof</h4>
+                            <a href="#" class="item"><strong>Customer Stories</strong><span>Success in Streaming, Retail & Telecoms.</span></a>
+                        </div>
+                        <div class="col">
+                            <h4>Connect</h4>
+                            <a href="#" class="item"><strong>News & Press</strong></a>
+                            <a href="#" class="item"><strong>Events</strong><span>Upcoming summits & webinars.</span></a>
+                            <a href="#" class="item"><strong>Careers</strong><span>Building the future of the edge.</span></a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <span class="nav-link">Products & Services ▾</span>
+                    <div class="mega-menu menu-3-col">
+                        <div class="col">
+                            <h4>Software</h4>
+                            <a href="#" class="item"><strong>Varnish Enterprise</strong><span>The foundational caching engine.</span></a>
+                            <a href="#" class="item"><strong>Varnish Controller</strong><span>Administration and observability GUI.</span></a>
+                            <a href="#" class="item"><strong>Varnish Traffic Router</strong><span>Global load balancing and routing.</span></a>
+                        </div>
+                        <div class="col">
+                            <h4>Managed & SaaS</h4>
+                            <a href="https://varnish-cdn.com" target="_blank" class="item"><strong>Varnish CDN ↗</strong><span>Fully managed European
