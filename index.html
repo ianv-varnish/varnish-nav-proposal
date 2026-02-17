@@ -85,4 +85,167 @@
 
         .pillar-box { background: #f4f8fb; padding: 12px; border-radius: 4px; border-left: 3px solid var(--accent-blue); }
         .btn-trial { background-color: var(--varnish-blue); color: var(--white); padding: 9px 18px; border-radius: 4px; font-weight: 600; text-decoration: none; font-size: 13px; margin-left: auto; transition: background 0.2s; }
-        .btn-trial:hover {
+        .btn-trial:hover { background-color: var(--accent-blue); }
+    </style>
+</head>
+<body>
+
+    <div class="utility-bar">
+        <div class="container">
+            <ul class="utility-links">
+                <li><a href="#">en-US 🌐</a></li>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Developer Portal</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">VARNISH</a>
+            
+            <ul class="nav-links">
+                <li class="nav-item">
+                    <span class="nav-link">Why Varnish? ▾</span>
+                    <div class="mega-menu menu-4-col">
+                        <div class="col">
+                            <h4>Company</h4>
+                            <a href="#" class="item"><strong>About Us</strong><span>Mission, leadership & history.</span></a>
+                            <a href="#" class="item"><strong>Our Technology</strong><span>High-performance architecture & VCL.</span></a>
+                            <a href="#" class="item"><strong>Partners</strong><span>Work with us.</span></a>
+                        </div>
+                        <div class="col">
+                            <h4>Market Proof</h4>
+                            <a href="#" class="item"><strong>Customer Stories</strong><span>Success in Streaming, Retail & Telecoms.</span></a>
+                        </div>
+                        <div class="col">
+                            <h4>Connect</h4>
+                            <a href="#" class="item"><strong>News & Press</strong></a>
+                            <a href="#" class="item"><strong>Events</strong><span>Upcoming summits & webinars.</span></a>
+                            <a href="#" class="item"><strong>Careers</strong><span>Building the future of the edge.</span></a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <span class="nav-link">Products & Services ▾</span>
+                    <div class="mega-menu menu-3-col">
+                        <div class="col">
+                            <h4>Software</h4>
+                            <a href="#" class="item"><strong>Varnish Enterprise</strong><span>The foundational caching engine.</span></a>
+                            <a href="#" class="item"><strong>Varnish Controller</strong><span>The robust GUI for administration and observability.</span></a>
+                            <a href="#" class="item"><strong>Varnish Traffic Router</strong><span>Advanced request routing and global load balancing.</span></a>
+                        </div>
+                        <div class="col">
+                            <h4>Managed & SaaS</h4>
+                            <a href="https://varnish-cdn.com" target="_blank" class="item"><strong>Varnish CDN ↗</strong><span>Fully managed European CDN.</span></a>
+                            <a href="https://orastreaming.com" target="_blank" class="item"><strong>Ora Streaming ↗</strong><span>Private CDN-as-a-Service for streaming.</span></a>
+                            <a href="https://www.varnish-software.com/orca" target="_blank" class="item"><strong>Artifact Delivery ↗</strong><span>Virtual Registry Manager.</span></a>
+                        </div>
+                        <div class="col">
+                            <h4>Platform Pillars</h4>
+                            <div class="pillar-box">
+                                <a href="#" class="item"><strong>Security</strong><span>WAF, DDoS protection, and origin shielding.</span></a>
+                                <a href="#" class="item"><strong>Edge Compute</strong><span>Programmable logic and real-time execution.</span></a>
+                                <a href="#" class="item"><strong>Observability</strong><span>Real-time traffic insights, logging, and performance metrics.</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <span class="nav-link">Use Cases ▾</span>
+                    <div class="mega-menu menu-3-col">
+                        <div class="col">
+                            <h4>Web & API</h4>
+                            <a href="#" class="item"><strong>Web Application Acceleration</strong><span>Speeding up dynamic sites and apps.</span></a>
+                            <a href="#" class="item"><strong>API Acceleration</strong><span>Reducing latency for REST/JSON endpoints.</span></a>
+                            <a href="#" class="item"><strong>Web Application Security</strong><span>Edge-based protection (WAF).</span></a>
+                            <a href="#" class="item"><strong>Origin Security</strong><span>Preventing backend overload and direct attacks.</span></a>
+                            <a href="#" class="item"><strong>eCommerce & CMS</strong><span>High-speed delivery for retail platforms.</span></a>
+                        </div>
+                        <div class="col">
+                            <h4>Content Delivery</h4>
+                            <a href="#" class="item"><strong>Origin Shield</strong><span>Protecting backends from "the thundering herd".</span></a>
+                            <a href="#" class="item"><strong>Private CDN</strong><span>Dedicated global caching infrastructure.</span></a>
+                            <a href="#" class="item"><strong>Streaming</strong><span>Scalable delivery for live and on-demand video.</span></a>
+                            <a href="#" class="item"><strong>Edge Delivery & Compute</strong><span>Moving logic and processing to the network edge.</span></a>
+                        </div>
+                        <div class="col">
+                            <h4>Data</h4>
+                            <a href="#" class="item"><strong>Data Pipeline Accelerator</strong><span>Caching and routing for data-heavy streams.</span></a>
+                            <a href="#" class="item"><strong>Repository & Artifact Caching</strong><span>Speeding up CI/CD and software repos.</span></a>
+                            <a href="#" class="item"><strong>S3 & Object Storage</strong><span>Optimizing cloud storage and reducing egress fees.</span></a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <span class="nav-link">Open Source ▾</span>
+                    <div class="mega-menu menu-2-col">
+                        <div class="col">
+                            <h4>The Core</h4>
+                            <a href="https://varnish.org" target="_blank" class="item"><strong>Varnish Cache ↗</strong><span>The open source HTTP accelerator.</span></a>
+                            <a href="#" class="item"><strong>VMODs Directory</strong></a>
+                        </div>
+                        <div class="col">
+                            <h4>Engage</h4>
+                            <a href="#" class="item"><strong>GitHub Repository</strong></a>
+                            <a href="#" class="item"><strong>Community Forums</strong></a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <span class="nav-link">Learn ▾</span>
+                    <div class="mega-menu menu-3-col">
+                        <div class="col">
+                            <h4>Documentation</h4>
+                            <a href="#" class="item"><strong>Technical Docs</strong></a>
+                            <a href="#" class="item"><strong>The Varnish Book</strong></a>
+                        </div>
+                        <div class="col">
+                            <h4>Education</h4>
+                            <a href="#" class="item"><strong>Developer Portal</strong></a>
+                            <a href="#" class="item"><strong>Training</strong></a>
+                            <a href="#" class="item"><strong>Glossary</strong></a>
+                        </div>
+                        <div class="col">
+                            <h4>Resources</h4>
+                            <a href="#" class="item"><strong>Blog</strong></a>
+                            <a href="#" class="item"><strong>Case Studies</strong></a>
+                            <a href="#" class="item"><strong>Webinars</strong></a>
+                            <a href="#" class="item"><strong>White Papers</strong></a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item align-right">
+                    <span class="nav-link">Support ▾</span>
+                    <div class="mega-menu menu-2-col">
+                        <div class="col">
+                            <h4>Support Plans</h4>
+                            <a href="#" class="item"><strong>Plan Overview</strong></a>
+                            <a href="#" class="item"><strong>Managed Services</strong></a>
+                            <a href="#" class="item"><strong>Contact Support</strong></a>
+                        </div>
+                        <div class="col">
+                            <h4>Technical Services</h4>
+                            <a href="#" class="item"><strong>Professional Services</strong></a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
+            </ul>
+            <a href="#" class="btn-trial">Try Varnish Free</a>
+        </div>
+    </nav>
+
+    <div style="padding: 100px 5%; text-align: center;">
+        <h1>Web Nav Draft</h1>
+    </div>
+
+</body>
+</html>
