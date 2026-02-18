@@ -121,26 +121,31 @@
     padding: 120px 0;
     background-color: var(--varnish-dark);
     color: var(--white);
-    /* Ambient "spotlight" gradients */
     background-image: 
         radial-gradient(circle at 50% 50%, rgba(0, 101, 163, 0.25) 0%, transparent 60%),
         radial-gradient(circle at 15% 85%, rgba(0, 163, 224, 0.08) 0%, transparent 40%);
     position: relative;
     overflow: hidden;
-    text-align: center; /* Ensures all inline content is centered */
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Force container to stack vertically and center its children */
+/* Specific centering for the hero container */
 .hero .container {
-    flex-direction: column; 
-    justify-content: center;
-    align-items: center; 
-    display: flex;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    margin: 0 auto;
 }
 
 .hero-content {
     max-width: 800px;
-    margin: 0 auto;
+    width: 100%;
+    margin-bottom: 40px;
 }
 
 .hero h1 {
@@ -148,28 +153,23 @@
     letter-spacing: -2.5px;
     margin-bottom: 20px;
     font-weight: 800;
-    /* Subtle silver-white gradient on text */
     background: linear-gradient(to bottom, #ffffff, #e0e0e0);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .hero p {
-    font-size: 19px; /* Shrunk from 24px/22px for better hierarchy */
+    font-size: 18px; /* Slightly smaller as requested */
     line-height: 1.6;
     color: var(--utility-gray);
-    margin-bottom: 40px;
-}
-
-.hero p strong {
-    color: var(--white);
-    font-weight: 600;
+    margin: 0 auto 40px auto;
 }
 
 .hero-btns {
-    display: flex;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
     gap: 16px;
-    justify-content: center; /* Centering the button container */
     width: 100%;
 }
     </style>
@@ -318,13 +318,13 @@
             <h1>Accelerate Everything</h1>
             <p>
                 The unified edge platform to <strong>secure</strong>, <strong>scale</strong>, and 
-                <strong>program</strong> your global traffic and data. Achieve total resilience and 
-                maximum flexibility with software and services designed to 
+                <strong>program</strong> your global traffic. Achieve total resilience and 
+                maximum flexibility with software and managed services designed to 
                 slash costs and optimize every byte.
             </p>
-            <div class="hero-btns">
-                <a href="#" class="btn-trial" style="font-size: 16px; padding: 14px 32px;">Try Varnish Free</a>
-            </div>
+        </div>
+        <div class="hero-btns">
+            <a href="#" class="btn-trial" style="font-size: 16px; padding: 14px 32px;">Try Varnish Free</a>
         </div>
     </div>
 </section>
