@@ -117,44 +117,48 @@
     align-items: center;
 }
 
-  .hero {
-    padding: 140px 0;
+.hero {
+    padding: 120px 0;
     background-color: var(--varnish-dark);
     color: var(--white);
-    /* Subtle ambient "spotlight" gradient */
+    /* Ambient "spotlight" gradients */
     background-image: 
-        radial-gradient(circle at 50% 50%, rgba(0, 101, 163, 0.2) 0%, transparent 50%),
-        radial-gradient(circle at 20% 80%, rgba(0, 163, 224, 0.05) 0%, transparent 40%);
+        radial-gradient(circle at 50% 50%, rgba(0, 101, 163, 0.25) 0%, transparent 60%),
+        radial-gradient(circle at 15% 85%, rgba(0, 163, 224, 0.08) 0%, transparent 40%);
     position: relative;
     overflow: hidden;
+    text-align: center; /* Ensures all inline content is centered */
 }
 
+/* Force container to stack vertically and center its children */
 .hero .container {
-    flex-direction: column;
+    flex-direction: column; 
     justify-content: center;
-    text-align: center; /* Center aligns the text */
+    align-items: center; 
+    display: flex;
 }
 
 .hero-content {
-    max-width: 900px; /* Increased to allow the subhead to flow better */
-    margin: 0 auto;   /* Centers the block itself */
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .hero h1 {
-    font-size: 72px; /* Slightly larger for the "Everything" impact */
-    letter-spacing: -3px;
-    margin-bottom: 24px;
+    font-size: 68px;
+    letter-spacing: -2.5px;
+    margin-bottom: 20px;
     font-weight: 800;
-    background: linear-gradient(180deg, #fff 0%, rgba(255,255,255,0.8) 100%);
+    /* Subtle silver-white gradient on text */
+    background: linear-gradient(to bottom, #ffffff, #e0e0e0);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .hero p {
-    font-size: 24px;
+    font-size: 19px; /* Shrunk from 24px/22px for better hierarchy */
     line-height: 1.6;
     color: var(--utility-gray);
-    margin-bottom: 48px;
+    margin-bottom: 40px;
 }
 
 .hero p strong {
@@ -165,7 +169,8 @@
 .hero-btns {
     display: flex;
     gap: 16px;
-    justify-content: center; /* Centers the buttons */
+    justify-content: center; /* Centering the button container */
+    width: 100%;
 }
     </style>
 </head>
@@ -307,7 +312,6 @@
     <a href="#" class="btn-trial">Try Varnish Free</a>
 </div>
     </nav>
-
 <section class="hero">
     <div class="container">
         <div class="hero-content">
