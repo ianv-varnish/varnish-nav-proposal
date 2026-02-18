@@ -116,6 +116,43 @@
     display: flex;
     align-items: center;
 }
+
+        .hero {
+    padding: 120px 0; /* Slightly more vertical breathing room */
+    background-color: var(--varnish-dark);
+    color: var(--white);
+    background-image: radial-gradient(circle at 80% 20%, rgba(0, 101, 163, 0.15) 0%, transparent 40%);
+}
+
+.hero-content {
+    max-width: 850px; /* Widened to accommodate the comprehensive subhead */
+}
+
+.hero h1 {
+    font-size: 64px;
+    letter-spacing: -2px;
+    margin-bottom: 20px;
+    font-weight: 800;
+    color: var(--white);
+}
+
+.hero p {
+    font-size: 22px;
+    line-height: 1.5;
+    color: var(--utility-gray);
+    margin-bottom: 44px;
+    font-weight: 400;
+}
+
+.hero p strong {
+    color: var(--accent-blue); /* Subtle highlight for the pillars */
+    font-weight: 600;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 16px;
+}
     </style>
 </head>
 <body>
@@ -257,10 +294,23 @@
 </div>
     </nav>
 
-    <div style="padding: 100px 5%; text-align: center;">
-        <h1>Varnish Web Navigation Draft </h1>
-        <p></p>
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1>Accelerate Everything</h1>
+            <p>
+                The unified edge platform to <strong>secure</strong>, <strong>scale</strong>, and 
+                <strong>program</strong> your global traffic. Achieve total resilience and 
+                maximum flexibility with software and managed services designed to 
+                slash costs and optimize every byte.
+            </p>
+            <div class="hero-btns">
+                <a href="#" class="btn-trial" style="font-size: 16px; padding: 12px 28px;">Try Varnish Free</a>
+                <a href="#" class="btn-outline" style="font-size: 16px; padding: 12px 28px;">Talk to an Expert</a>
+            </div>
+        </div>
     </div>
+</section>
 
 </body>
 </html>
