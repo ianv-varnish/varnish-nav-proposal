@@ -31,14 +31,8 @@
             height: 100%;
         }
 
-        .utility-bar {
-    background-color: transparent; /* Bleeds into hero */
-    height: 35px;
-    position: relative;
-    z-index: 1001;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
-  /*      .utility-bar {
+      .utility-bar {
             background-color: var(--varnish-dark);
             height: 35px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -47,21 +41,9 @@
         .utility-links { display: flex; gap: 20px; list-style: none; margin: 0; padding: 0; }
         .utility-links a { color: var(--utility-gray); text-decoration: none; font-size: 13px; }
         .utility-links a:hover { color: var(--white); }
-*/
+
      
-    .navbar {
-    position: absolute; /* Floats over the hero section */
-    top: 35px; /* Sits exactly under utility bar */
-    left: 0;
-    width: 100%;
-    height: 75px;
-    background-color: rgba(0, 18, 38, 0.5); /* 50% transparent Varnish Dark */
-    backdrop-filter: blur(12px); /* The "Glass" effect */
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    z-index: 1000;
-}    
-  /*      .navbar {
+      .navbar {
             background-color: var(--varnish-dark);
             height: 75px;
             position: relative;
@@ -75,7 +57,6 @@
         .nav-item { position: relative; height: 100%; display: flex; align-items: center; margin-right: 20px; }
         .nav-link { color: var(--white); text-decoration: none; font-size: 15px; font-weight: 500; cursor: pointer; white-space: nowrap; }
 
-    */
         .mega-menu {
             display: none;
             position: absolute;
@@ -158,21 +139,7 @@
     align-items: center;
 }
 
-.hero {
-    /* Padding-top accounts for the 35px utility + 75px navbar */
-    padding: 180px 0 120px 0; 
-    background-color: var(--varnish-dark);
-    color: var(--white);
-    /* Gradients now start from the very top of the screen */
-    background-image: 
-        radial-gradient(circle at 50% 30%, rgba(0, 101, 163, 0.3) 0%, transparent 60%),
-        radial-gradient(circle at 80% 80%, rgba(0, 163, 224, 0.1) 0%, transparent 50%);
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-}
-        
-/* .hero {
+ .hero {
     padding: 120px 0;
     background-color: var(--varnish-dark);
     color: var(--white);
@@ -186,7 +153,6 @@
     align-items: center;
     justify-content: center;
 }
-*/
         
 /* Specific centering for the hero container */
 .hero .container {
