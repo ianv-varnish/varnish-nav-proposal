@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pricing - Varnish Software</title>
+    <title>Pricing | Varnish Software</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     
     <style>
-        /* --- START OF YOUR NAV MENU CSS --- */
+        /* --- YOUR CUSTOM NAV STYLES --- */
         :root {
             --varnish-dark: #001226;
             --varnish-blue: #0065a3;
@@ -17,12 +17,13 @@
             --text-sub: #666;
             --white: #ffffff;
             --utility-gray: rgba(255, 255, 255, 0.7);
-            --max-width: 1200px;
+            --max-nav-width: 1200px;
         }
 
-        /* Adjusting Container to prevent conflicts with Tailwind */
-        .nav-container {
-            max-width: var(--max-width);
+        .nav-wrapper { font-family: 'Inter', sans-serif; }
+
+        .custom-nav-container {
+            max-width: var(--max-nav-width);
             margin: 0 auto;
             width: 100%;
             display: flex;
@@ -40,23 +41,18 @@
             align-items: center;
         }
 
-        .utility-bar .nav-container { justify-content: flex-end; }
-
         .utility-links { display: flex; gap: 20px; list-style: none; margin: 0; padding: 0; }
         .utility-links a { color: var(--utility-gray); text-decoration: none; font-size: 13px; }
-        .utility-links a:hover { color: var(--white); }
-     
+        
         .navbar {
             background-color: var(--varnish-dark);
             height: 75px;
             position: relative;
             z-index: 1000;
         }
-        .navbar .nav-container { justify-content: flex-start; }
         
         .logo { color: var(--white); font-weight: 800; font-size: 24px; text-decoration: none; margin-right: 40px; }
         .nav-links { display: flex; list-style: none; margin: 0; padding: 0; height: 100%; }
-        
         .nav-item { position: relative; height: 100%; display: flex; align-items: center; margin-right: 20px; }
         .nav-link { color: var(--white); text-decoration: none; font-size: 15px; font-weight: 500; cursor: pointer; white-space: nowrap; }
 
@@ -70,14 +66,12 @@
             padding: 30px;
             box-sizing: border-box;
             border-top: 3px solid var(--accent-blue);
-            border-radius: 0 4px 4px 4px;
             z-index: 1100;
         }
 
         .nav-item:hover .mega-menu { display: grid; }
         .nav-item:hover .nav-link { color: var(--accent-blue); }
 
-        .menu-4-col { width: 950px; grid-template-columns: repeat(4, 1fr); gap: 25px; }
         .menu-3-col { width: 850px; grid-template-columns: repeat(3, 1fr); gap: 25px; }
         .menu-2-col { width: 550px; grid-template-columns: repeat(2, 1fr); gap: 25px; }
 
@@ -85,125 +79,239 @@
         .item { display: block; text-decoration: none; margin-bottom: 18px; }
         .item strong { display: block; color: var(--varnish-dark); font-size: 16px; margin-bottom: 4px; }
         .item span { display: block; color: var(--text-sub); font-size: 13.5px; line-height: 1.5; }
-        .item:hover strong { color: var(--varnish-blue); text-decoration: underline; }
 
-        .pillar-box { background: #f4f8fb; padding: 12px; border-radius: 4px; border-left: 3px solid var(--accent-blue); }
-        .btn-trial { background-color: var(--varnish-blue); color: var(--white); padding: 10px 22px; border-radius: 4px; font-weight: 600; text-decoration: none; font-size: 14px; margin-left: auto; transition: background 0.2s; }
-        
-        .btn-secondary {
-            border: 1px solid var(--accent-blue);
-            color: var(--accent-blue);
-            padding: 9px 18px;
-            border-radius: 4px;
-            font-weight: 600;
-            text-decoration: none;
-            font-size: 13px;
-            transition: all 0.2s;
-            margin-right: 12px;
-        }
-
+        .btn-trial { background-color: var(--varnish-blue); color: var(--white); padding: 10px 22px; border-radius: 4px; font-weight: 600; text-decoration: none; font-size: 14px; margin-left: auto; }
+        .btn-secondary { border: 1px solid var(--accent-blue); color: var(--accent-blue); padding: 9px 18px; border-radius: 4px; font-weight: 600; text-decoration: none; font-size: 13px; margin-right: 12px; }
         .actions { margin-left: auto; display: flex; align-items: center; }
-        /* --- END OF NAV CSS --- */
 
-        /* Pricing Card Specific Styles */
-        .pricing-active-tab { border-bottom: 3px solid #0065a3; color: #0065a3; }
-        .card-shadow:hover { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1); }
+        /* Pricing Card Styling */
+        .card-shadow:hover { box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.1); }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900">
+<body class="bg-slate-50">
 
-    <div class="utility-bar">
-        <div class="nav-container">
-            <ul class="utility-links">
-                <li><a href="#">en-US 🌐</a></li>
-                <li><a href="#">Downloads</a></li>
-                <li><a href="#">Support</a></li>
-                <li><a href="#">Developer Portal</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">VARNISH</a>
-            <ul class="nav-links">
-                <li class="nav-item">
-                    <span class="nav-link">Products & Services ▾</span>
-                    <div class="mega-menu menu-3-col">
-                        <div class="col">
-                            <h4>Software</h4>
-                            <a href="#" class="item"><strong>Varnish Enterprise</strong><span>The foundational caching engine.</span></a>
-                            <a href="#" class="item"><strong>Varnish Controller</strong><span>Administration and observability GUI.</span></a>
-                        </div>
-                        <div class="col">
-                            <h4>Managed & SaaS</h4>
-                            <a href="#" class="item"><strong>Varnish CDN ↗</strong><span>Fully managed European CDN.</span></a>
-                        </div>
-                        <div class="col">
-                            <h4>Capabilities</h4>
-                            <div class="pillar-box">
-                                <a href="#" class="item"><strong>Caching</strong><span>Origin shielding and acceleration.</span></a>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="pricing.html" style="color: var(--accent-blue);">Pricing</a>
-                </li>
-            </ul>
-            <div class="actions">
-                <a href="#" class="btn-secondary">Talk to an expert</a>
-                <a href="#" class="btn-trial">Try Varnish Free</a>
+    <div class="nav-wrapper">
+        <div class="utility-bar">
+            <div class="custom-nav-container" style="justify-content: flex-end;">
+                <ul class="utility-links">
+                    <li><a href="#">en-US 🌐</a></li>
+                    <li><a href="#">Downloads</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Developer Portal</a></li>
+                </ul>
             </div>
         </div>
-    </nav>
 
-    <header class="py-16 px-4 text-center bg-white border-b border-slate-200">
-        <h1 class="text-5xl font-extrabold mb-4 tracking-tight">Flexible Pricing for Every Scale</h1>
-        <p class="text-xl text-slate-600 mb-10 max-w-2xl mx-auto">Choose between managed cloud delivery or full control on your own infrastructure.</p>
-        
-        <div class="inline-flex p-1 bg-slate-100 rounded-xl">
-            <button onclick="showPath('saas')" id="btn-saas" class="px-8 py-3 rounded-lg font-bold bg-white shadow-sm text-blue-700 transition-all">Varnish CDN (SaaS)</button>
-            <button onclick="showPath('self')" id="btn-self" class="px-8 py-3 rounded-lg font-bold text-slate-500 hover:text-slate-700 transition-all">Self-Hosted Software</button>
+        <nav class="navbar">
+            <div class="custom-nav-container">
+                <a href="index.html" class="logo">VARNISH</a>
+                <ul class="nav-links">
+                    <li class="nav-item">
+                        <span class="nav-link">Products & Services ▾</span>
+                        <div class="mega-menu menu-3-col">
+                            <div class="col">
+                                <h4>Software</h4>
+                                <a href="#" class="item"><strong>Varnish Enterprise</strong><span>The foundational caching engine.</span></a>
+                                <a href="#" class="item"><strong>Varnish Controller</strong><span>Administration and observability GUI.</span></a>
+                                <a href="#" class="item"><strong>Varnish Traffic Router</strong><span>Global load balancing.</span></a>
+                            </div>
+                            <div class="col">
+                                <h4>Managed & SaaS</h4>
+                                <a href="#" class="item"><strong>Varnish CDN ↗</strong><span>Fully managed European CDN.</span></a>
+                                <a href="#" class="item"><strong>Ora Streaming ↗</strong><span>CDN-as-a-Service for streaming.</span></a>
+                            </div>
+                            <div class="col">
+                                <h4>Capabilities</h4>
+                                <a href="#" class="item"><strong>Caching</strong><span>High-performance shielding.</span></a>
+                                <a href="#" class="item"><strong>Security</strong><span>WAF, DDoS, and origin shielding.</span></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <span class="nav-link">Use Cases ▾</span>
+                        <div class="mega-menu menu-3-col">
+                            <div class="col">
+                                <h4>Web & API</h4>
+                                <a href="#" class="item"><strong>API Acceleration</strong><span>Reducing latency for endpoints.</span></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <span class="nav-link">Open Source ▾</span>
+                        <div class="mega-menu menu-2-col">
+                            <div class="col">
+                                <h4>Open Source</h4>
+                                <a href="#" class="item"><strong>Varnish Cache ↗</strong><span>Open-source HTTP accelerator.</span></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pricing.html" style="color: var(--accent-blue);">Pricing</a>
+                    </li>
+                </ul>
+                <div class="actions">
+                    <a href="#" class="btn-secondary">Talk to an expert</a>
+                    <a href="#" class="btn-trial">Try Varnish Free</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <header class="py-16 text-center bg-white border-b border-slate-200">
+        <h1 class="text-5xl font-extrabold mb-4 text-slate-900">Choose Your Varnish Deployment</h1>
+        <div class="mt-8 inline-flex p-1 bg-slate-100 rounded-xl">
+            <button onclick="showPath('saas')" id="btn-saas" class="px-8 py-3 rounded-lg font-bold bg-white shadow-sm text-blue-700">Managed SaaS (CDN)</button>
+            <button onclick="showPath('self')" id="btn-self" class="px-8 py-3 rounded-lg font-bold text-slate-500 hover:text-slate-700">Self-Hosted Software</button>
         </div>
     </header>
 
     <main class="max-w-7xl mx-auto px-4 py-12">
-        <section id="saas-section" class="grid grid-cols-1 md:grid-cols-4 gap-6">
-            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
-                <h3 class="text-lg font-bold">Growth</h3>
-                <div class="text-4xl font-black my-4">€69<span class="text-base font-normal text-slate-400">/mo</span></div>
-                <p class="text-sm text-slate-500 mb-6">For growing businesses.</p>
-                <button class="w-full py-3 bg-slate-900 text-white font-bold rounded-lg mb-4">Start for free</button>
-                <ul class="text-sm space-y-3">
-                    <li><i class="fa-solid fa-check text-blue-500 mr-2"></i>2 TB included</li>
-                    <li><i class="fa-solid fa-check text-blue-500 mr-2"></i>Managed WAF</li>
+        
+        <div id="saas-section" class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex flex-col">
+                <h3 class="font-bold text-xl">Developer</h3>
+                <div class="text-3xl font-black my-4">Free</div>
+                <p class="text-sm text-slate-500 mb-6">Test the Varnish CDN experience.</p>
+                <ul class="text-sm space-y-3 mb-8 flex-grow">
+                    <li>0.5 TB included</li>
+                    <li>10 custom cache rules</li>
+                    <li>Managed SSL</li>
+                    <li>Bot Verification</li>
                 </ul>
+                <button class="w-full py-2 bg-slate-900 text-white rounded font-bold">Start Free</button>
             </div>
-            </section>
 
-        <section id="self-hosted-section" class="hidden">
-            <div class="text-center py-20 text-slate-400">Self-Hosted content loads here...</div>
-        </section>
+            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex flex-col">
+                <h3 class="font-bold text-xl">Growth</h3>
+                <div class="text-3xl font-black my-4">€69<span class="text-sm font-normal">/mo</span></div>
+                <p class="text-sm text-slate-500 mb-6">For growing businesses.</p>
+                <ul class="text-sm space-y-3 mb-8 flex-grow text-slate-600">
+                    <li class="font-bold text-slate-900">Everything in Developer +</li>
+                    <li>2 TB included</li>
+                    <li>100 custom rules</li>
+                    <li>WebSocket Proxy</li>
+                    <li>Image Optimization</li>
+                </ul>
+                <button class="w-full py-2 bg-slate-900 text-white rounded font-bold">Start Free</button>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl border-2 border-blue-600 shadow-lg flex flex-col relative">
+                <span class="absolute -top-3 right-4 bg-blue-600 text-white px-2 py-1 text-xs rounded">Recommended</span>
+                <h3 class="font-bold text-xl">Business</h3>
+                <div class="text-3xl font-black my-4">€299<span class="text-sm font-normal">/mo</span></div>
+                <p class="text-sm text-slate-500 mb-6">Reliable backbone for small business.</p>
+                <ul class="text-sm space-y-3 mb-8 flex-grow text-slate-600">
+                    <li class="font-bold text-slate-900">Everything in Growth +</li>
+                    <li>10 TB included</li>
+                    <li>300 custom rules</li>
+                    <li>DDoS protection (L3 & 4)</li>
+                    <li>BYO Certificate (BYOC)</li>
+                </ul>
+                <button class="w-full py-2 bg-blue-600 text-white rounded font-bold">Start Free</button>
+            </div>
+
+            <div class="bg-slate-900 text-white p-6 rounded-xl border border-slate-800 shadow-sm flex flex-col">
+                <h3 class="font-bold text-xl">Custom</h3>
+                <div class="text-3xl font-black my-4">Quote</div>
+                <p class="text-sm text-slate-400 mb-6">Demanding business-critical ops.</p>
+                <ul class="text-sm space-y-3 mb-8 flex-grow text-slate-300">
+                    <li>> 100 TB included</li>
+                    <li>2000+ custom rules</li>
+                    <li>Log Export</li>
+                    <li>Chat Support (Per Quote)</li>
+                </ul>
+                <button class="w-full py-2 bg-white text-slate-900 rounded font-bold">Contact Sales</button>
+            </div>
+        </div>
+
+        <div id="self-hosted-section" class="hidden space-y-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl border border-slate-200">
+                    <h3 class="font-bold text-xl">Varnish Cache (OSS)</h3>
+                    <div class="text-3xl font-black my-4">Free Forever</div>
+                    <ul class="text-sm space-y-4 text-slate-600">
+                        <li>Community Support</li>
+                        <li>Standard Caching Features</li>
+                        <li>Apache 2.0 Licensed</li>
+                    </ul>
+                </div>
+
+                <div class="bg-blue-50 p-8 rounded-xl border-2 border-dashed border-blue-200">
+                    <h3 class="font-bold text-xl">Enterprise Trial</h3>
+                    <div class="text-3xl font-black my-4">30 Days $0</div>
+                    <ul class="text-sm space-y-4 text-slate-600">
+                        <li>All Enterprise features enabled</li>
+                        <li>AWS Free Tier eligible</li>
+                        <li>Deploy instantly</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl border-2 border-slate-900">
+                    <h3 class="font-bold text-xl">Varnish Enterprise</h3>
+                    <div class="text-3xl font-black my-4">Quote</div>
+                    <ul class="text-sm space-y-3 text-slate-600">
+                        <li>Massive Storage Engine</li>
+                        <li>45+ pluggable modules</li>
+                        <li>24/7 global support</li>
+                        <li>Real-time monitoring</li>
+                    </ul>
+                    <button class="mt-6 w-full py-2 bg-slate-900 text-white rounded font-bold">Request Quote</button>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm">
+                <div class="p-6 border-b border-slate-200 bg-slate-50">
+                    <h3 class="font-bold text-lg text-slate-900">Commercial Support Comparison</h3>
+                </div>
+                <table class="w-full text-left text-sm">
+                    <thead>
+                        <tr class="bg-slate-100 text-slate-600 uppercase text-xs font-bold">
+                            <th class="p-4">Support Element</th>
+                            <th class="p-4">Cache (OSS)</th>
+                            <th class="p-4">Standard</th>
+                            <th class="p-4 bg-blue-50 text-blue-700">Premium</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100">
+                        <tr>
+                            <td class="p-4 font-medium">No. Support Requests</td>
+                            <td class="p-4">5 / year</td>
+                            <td class="p-4">20 / year</td>
+                            <td class="p-4 bg-blue-50">Unlimited</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-medium">Availability</td>
+                            <td class="p-4">Business Hours</td>
+                            <td class="p-4">Business Hours</td>
+                            <td class="p-4 bg-blue-50 font-bold">24/7/365</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-medium">SLA (Critical Response)</td>
+                            <td class="p-4">None</td>
+                            <td class="p-4">4 Business Hours</td>
+                            <td class="p-4 bg-blue-50">2 Hours</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </main>
 
     <script>
         function showPath(path) {
-            const saasBtn = document.getElementById('btn-saas');
-            const selfBtn = document.getElementById('btn-self');
-            const saasSection = document.getElementById('saas-section');
-            const selfSection = document.getElementById('self-hosted-section');
+            const s1 = document.getElementById('saas-section');
+            const s2 = document.getElementById('self-hosted-section');
+            const b1 = document.getElementById('btn-saas');
+            const b2 = document.getElementById('btn-self');
 
             if (path === 'saas') {
-                saasBtn.className = "px-8 py-3 rounded-lg font-bold bg-white shadow-sm text-blue-700 transition-all";
-                selfBtn.className = "px-8 py-3 rounded-lg font-bold text-slate-500 hover:text-slate-700 transition-all";
-                saasSection.classList.remove('hidden');
-                selfSection.classList.add('hidden');
+                s1.classList.remove('hidden'); s2.classList.add('hidden');
+                b1.className = "px-8 py-3 rounded-lg font-bold bg-white shadow-sm text-blue-700";
+                b2.className = "px-8 py-3 rounded-lg font-bold text-slate-500 hover:text-slate-700";
             } else {
-                selfBtn.className = "px-8 py-3 rounded-lg font-bold bg-white shadow-sm text-blue-700 transition-all";
-                saasBtn.className = "px-8 py-3 rounded-lg font-bold text-slate-500 hover:text-slate-700 transition-all";
-                selfSection.classList.remove('hidden');
-                saasSection.classList.add('hidden');
+                s2.classList.remove('hidden'); s1.classList.add('hidden');
+                b2.className = "px-8 py-3 rounded-lg font-bold bg-white shadow-sm text-blue-700";
+                b1.className = "px-8 py-3 rounded-lg font-bold text-slate-500 hover:text-slate-700";
             }
         }
     </script>
