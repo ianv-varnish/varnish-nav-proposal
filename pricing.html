@@ -27,7 +27,7 @@
     </header>
 
     <section id="saas-section" class="py-16 max-w-7xl mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-20">
             <div class="bg-white p-6 rounded-xl border border-slate-200 card-shadow flex flex-col">
                 <h3 class="text-lg font-bold">Developer</h3>
                 <div class="text-3xl font-black my-4">€0<span class="text-sm font-normal text-slate-500">/mo</span></div>
@@ -83,6 +83,52 @@
                 <button class="w-full py-3 bg-white text-slate-900 font-bold rounded-lg hover:bg-slate-200 transition">Contact Sales</button>
             </div>
         </div>
+
+        <div class="mt-20">
+            <h2 class="text-3xl font-bold text-center mb-4">Detailed CDN Comparison</h2>
+            <p class="text-center text-slate-600 mb-12">Testing it out or deploying a complex site. We always got a plan that match your preferences.</p>
+            <div class="overflow-x-auto bg-white rounded-xl shadow-sm border border-slate-200">
+                <table class="w-full text-left border-collapse text-sm">
+                    <thead>
+                        <tr class="bg-slate-50 border-b border-slate-200">
+                            <th class="p-4 font-bold text-slate-500 uppercase text-xs">Pricing Features</th>
+                            <th class="p-4 font-bold text-center">Developer<br><span class="text-xs font-normal">Free</span></th>
+                            <th class="p-4 font-bold text-center">Growth<br><span class="text-xs font-normal">€69</span></th>
+                            <th class="p-4 font-bold text-center">Business<br><span class="text-xs font-normal">€299</span></th>
+                            <th class="p-4 font-bold text-center">Custom<br><span class="text-xs font-normal">Contact</span></th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100">
+                        <tr class="feature-group-bg"><td colspan="5" class="p-3 font-bold text-blue-800">Content Delivery</td></tr>
+                        <tr><td class="p-4">TB Included In Monthly Fee</td><td class="p-4 text-center">0.5</td><td class="p-4 text-center">2</td><td class="p-4 text-center">10</td><td class="p-4 text-center">> 100</td></tr>
+                        <tr><td class="p-4">TB Overage Price</td><td class="p-4 text-center">€30</td><td class="p-4 text-center">€25</td><td class="p-4 text-center">€20</td><td class="p-4 text-center">Quote</td></tr>
+                        <tr><td class="p-4">Always Online / CDN</td><td class="p-4 text-center text-green-600"><i class="fa-solid fa-check"></i></td><td class="p-4 text-center text-green-600"><i class="fa-solid fa-check"></i></td><td class="p-4 text-center text-green-600"><i class="fa-solid fa-check"></i></td><td class="p-4 text-center text-green-600"><i class="fa-solid fa-check"></i></td></tr>
+                        <tr><td class="p-4">Cache Invalidation</td><td class="p-4 text-center">5/min</td><td class="p-4 text-center">1/s</td><td class="p-4 text-center">1/s</td><td class="p-4 text-center">1+/sec</td></tr>
+                        <tr><td class="p-4">Minimum Cache TTL</td><td class="p-4 text-center">2h</td><td class="p-4 text-center">1h</td><td class="p-4 text-center">1s</td><td class="p-4 text-center">1s</td></tr>
+                        
+                        <tr class="feature-group-bg"><td colspan="5" class="p-3 font-bold text-blue-800">Customization</td></tr>
+                        <tr><td class="p-4">Custom Cache Rules</td><td class="p-4 text-center">10</td><td class="p-4 text-center">100</td><td class="p-4 text-center">300</td><td class="p-4 text-center">2000+</td></tr>
+                        <tr><td class="p-4">Max Upload Size (MB)</td><td class="p-4 text-center">100</td><td class="p-4 text-center">100</td><td class="p-4 text-center">200</td><td class="p-4 text-center">Custom</td></tr>
+                        <tr><td class="p-4">WebSocket Proxy</td><td class="p-4 text-center text-slate-300">—</td><td class="p-4 text-center text-green-600"><i class="fa-solid fa-check"></i></td><td class="p-4 text-center text-green-600"><i class="fa-solid fa-check"></i></td><td class="p-4 text-center text-green-600"><i class="fa-solid fa-check"></i></td></tr>
+                        
+                        <tr class="feature-group-bg"><td colspan="5" class="p-3 font-bold text-blue-800">Image Handling</td></tr>
+                        <tr><td class="p-4">Image Optimization</td><td class="p-4 text-center text-slate-300">—</td><td class="p-4 text-center text-green-600"><i class="fa-solid fa-check"></i></td><td class="p-4 text-center text-green-600"><i class="fa-solid fa-check"></i></td><td class="p-4 text-center text-green-600"><i class="fa-solid fa-check"></i></td></tr>
+                        <tr><td class="p-4">Image Transformations</td><td class="p-4 text-center text-slate-300">—</td><td class="p-4 text-center">1,000</td><td class="p-4 text-center">5,000</td><td class="p-4 text-center">10,000</td></tr>
+
+                        <tr class="feature-group-bg"><td colspan="5" class="p-3 font-bold text-blue-800">Security</td></tr>
+                        <tr><td class="p-4">Bot Protection - Standard</td><td class="p-4 text-center text-slate-300">—</td><td class="p-4 text-center">€25</td><td class="p-4 text-center">€25</td><td class="p-4 text-center text-green-600"><i class="fa-solid fa-check"></i></td></tr>
+                        <tr><td class="p-4">Managed WAF</td><td class="p-4 text-center text-slate-300">Basic</td><td class="p-4 text-center text-slate-300">Standard</td><td class="p-4 text-center text-green-600">Standard</td><td class="p-4 text-center text-green-600">Advanced</td></tr>
+                        <tr><td class="p-4">DDoS Protection</td><td class="p-4 text-center text-slate-300">—</td><td class="p-4 text-center text-slate-300">—</td><td class="p-4 text-center text-green-600"><i class="fa-solid fa-check"></i></td><td class="p-4 text-center text-green-600"><i class="fa-solid fa-check"></i></td></tr>
+                        <tr><td class="p-4">Managed SSL / BYOC</td><td class="p-4 text-center">SSL only</td><td class="p-4 text-center">SSL only</td><td class="p-4 text-center text-green-600"><i class="fa-solid fa-check"></i></td><td class="p-4 text-center text-green-600"><i class="fa-solid fa-check"></i></td></tr>
+
+                        <tr class="feature-group-bg"><td colspan="5" class="p-3 font-bold text-blue-800">Support</td></tr>
+                        <tr><td class="p-4">Ticket Support</td><td class="p-4 text-center text-slate-300">—</td><td class="p-4 text-center text-green-600"><i class="fa-solid fa-check"></i></td><td class="p-4 text-center text-green-600"><i class="fa-solid fa-check"></i></td><td class="p-4 text-center text-green-600"><i class="fa-solid fa-check"></i></td></tr>
+                        <tr><td class="p-4">Response Time</td><td class="p-4 text-center text-slate-300">—</td><td class="p-4 text-center text-slate-500">16h</td><td class="p-4 text-center text-slate-500">8h</td><td class="p-4 text-center text-slate-900 font-bold">4h</td></tr>
+                    </tbody>
+                </table>
+                <div class="p-4 text-xs text-slate-400">* Advanced security features and log export coming soon.</div>
+            </div>
+        </div>
     </section>
 
     <section id="self-hosted-section" class="py-16 max-w-7xl mx-auto px-4 hidden">
@@ -98,132 +144,7 @@
                 </ul>
                 <button class="w-full py-3 border-2 border-slate-900 font-bold rounded-lg">Download Source</button>
             </div>
-
-            <div class="bg-blue-50 p-8 rounded-xl border-2 border-dashed border-blue-300">
-                <h3 class="text-xl font-bold">Enterprise Trial</h3>
-                <div class="text-3xl font-black my-4">30 Days<span class="text-sm font-normal text-slate-500"> Free</span></div>
-                <p class="text-slate-600 mb-6">Experience the full power of Varnish Enterprise without the commitment.</p>
-                <ul class="space-y-4 mb-8">
-                    <li><i class="fa-solid fa-check text-blue-500 mr-2"></i>All Enterprise Features</li>
-                    <li><i class="fa-solid fa-check text-blue-500 mr-2"></i>Deploy Instantly</li>
-                    <li><i class="fa-solid fa-check text-blue-500 mr-2"></i>AWS Free Tier Eligible</li>
-                </ul>
-                <button class="w-full py-3 bg-blue-600 text-white font-bold rounded-lg">Start Free Trial</button>
             </div>
-
-            <div class="bg-white p-8 rounded-xl border-2 border-blue-600 relative ring-4 ring-blue-50">
-                <h3 class="text-xl font-bold">Varnish Enterprise</h3>
-                <div class="text-3xl font-black my-4 italic text-blue-600">Contact Us</div>
-                <p class="text-slate-600 mb-6">The ultimate solution for service providers and content distributors.</p>
-                <ul class="space-y-4 mb-8">
-                    <li><i class="fa-solid fa-star text-blue-500 mr-2"></i>Massive Storage Engine</li>
-                    <li><i class="fa-solid fa-star text-blue-500 mr-2"></i>45+ Pluggable Modules</li>
-                    <li><i class="fa-solid fa-star text-blue-500 mr-2"></i>Edge Computing</li>
-                    <li><i class="fa-solid fa-star text-blue-500 mr-2"></i>Enterprise Security & WAF</li>
-                </ul>
-                <button class="w-full py-3 bg-slate-900 text-white font-bold rounded-lg">Request a Quote</button>
-            </div>
-        </div>
-
-        <div class="mt-20 mb-20">
-            <h2 class="text-3xl font-extrabold text-slate-900 mb-12 text-center">What's Included?</h2>
-            <div class="overflow-x-auto bg-white rounded-xl shadow-sm border border-slate-200">
-                <table class="w-full text-left border-collapse">
-                    <thead>
-                        <tr class="bg-slate-50 border-b border-slate-200">
-                            <th class="p-4 text-sm font-bold text-slate-500 uppercase">Core Features</th>
-                            <th class="p-4 text-sm font-bold text-slate-500 uppercase text-center">Varnish Cache (OSS)</th>
-                            <th class="p-4 text-sm font-bold text-blue-600 uppercase text-center bg-blue-50/30">Varnish Enterprise</th>
-                        </tr>
-                    </thead>
-                    <tbody class="text-sm divide-y divide-slate-100">
-                        <tr><td class="p-4">HTTP proxy</td><td class="p-4 text-center"></td><td class="p-4 text-center bg-blue-50/30 text-green-600"><i class="fa-solid fa-check"></i></td></tr>
-                        <tr><td class="p-4">Memory caching</td><td class="p-4 text-center"></td><td class="p-4 text-center bg-blue-50/30 text-green-600"><i class="fa-solid fa-check"></i></td></tr>
-                        <tr><td class="p-4">VCL configuration</td><td class="p-4 text-center"></td><td class="p-4 text-center bg-blue-50/30 text-green-600"><i class="fa-solid fa-check"></i></td></tr>
-                        <tr><td class="p-4">Rate limiting</td><td class="p-4 text-center"></td><td class="p-4 text-center bg-blue-50/30 text-green-600"><i class="fa-solid fa-check"></i></td></tr>
-                        
-                        <tr class="feature-group-bg"><td class="p-4 font-bold" colspan="3">Solutions</td></tr>
-                        <tr><td class="p-4">Ecommerce (Magento)</td><td class="p-4 text-center"></td><td class="p-4 text-center bg-blue-50/30 text-green-600"><i class="fa-solid fa-check"></i></td></tr>
-                        <tr><td class="p-4">Content Management System (Drupal, etc)</td><td class="p-4 text-center"></td><td class="p-4 text-center bg-blue-50/30 text-green-600"><i class="fa-solid fa-check"></i></td></tr>
-                        <tr><td class="p-4">Streaming (Media, VOD, Live)</td><td class="p-4 text-center"></td><td class="p-4 text-center bg-blue-50/30 text-green-600"><i class="fa-solid fa-check"></i></td></tr>
-                        <tr><td class="p-4">DIY Content Delivery Network</td><td class="p-4 text-center"></td><td class="p-4 text-center bg-blue-50/30 text-green-600"><i class="fa-solid fa-check"></i></td></tr>
-                        <tr><td class="p-4">DevOps Productivity</td><td class="p-4 text-center"></td><td class="p-4 text-center bg-blue-50/30 text-green-600"><i class="fa-solid fa-check"></i></td></tr>
-                        <tr><td class="p-4">Object Storage Acceleration</td><td class="p-4 text-center"></td><td class="p-4 text-center bg-blue-50/30 text-green-600"><i class="fa-solid fa-check"></i></td></tr>
-                        
-                        <tr class="feature-group-bg"><td class="p-4 font-bold" colspan="3">Support</td></tr>
-                        <tr><td class="p-4">Community support</td><td class="p-4 text-center text-green-600"><i class="fa-solid fa-check"></i></td><td class="p-4 text-center bg-blue-50/30 text-green-600"><i class="fa-solid fa-check"></i></td></tr>
-                        <tr><td class="p-4">Quick start / Optimized instance</td><td class="p-4 text-center"></td><td class="p-4 text-center bg-blue-50/30 text-green-600"><i class="fa-solid fa-check"></i></td></tr>
-                        <tr><td class="p-4">Migration assistance</td><td class="p-4 text-center"></td><td class="p-4 text-center bg-blue-50/30 text-green-600"><i class="fa-solid fa-check"></i></td></tr>
-                        <tr><td class="p-4">Health checks</td><td class="p-4 text-center"></td><td class="p-4 text-center bg-blue-50/30 text-green-600"><i class="fa-solid fa-check"></i></td></tr>
-                        <tr><td class="p-4">Standard support</td><td class="p-4 text-center"></td><td class="p-4 text-center bg-blue-50/30 font-bold text-blue-700">Add-on</td></tr>
-                        <tr><td class="p-4">Premium support</td><td class="p-4 text-center"></td><td class="p-4 text-center bg-blue-50/30 font-bold text-blue-700">Add-on</td></tr>
-                        <tr><td class="p-4">Assist+ / Managed Services</td><td class="p-4 text-center"></td><td class="p-4 text-center bg-blue-50/30 font-bold text-blue-700">Add-on</td></tr>
-
-                        <tr class="feature-group-bg"><td class="p-4 font-bold" colspan="3">Security</td></tr>
-                        <tr><td class="p-4">HTTPs proxy (TLS/SSL)</td><td class="p-4 text-center"></td><td class="p-4 text-center bg-blue-50/30 text-green-600"><i class="fa-solid fa-check"></i></td></tr>
-                        <tr><td class="p-4">JWT / HMAC Signing</td><td class="p-4 text-center"></td><td class="p-4 text-center bg-blue-50/30 text-green-600"><i class="fa-solid fa-check"></i></td></tr>
-                        <tr><td class="p-4">Bot verification</td><td class="p-4 text-center"></td><td class="p-4 text-center bg-blue-50/30 text-green-600"><i class="fa-solid fa-check"></i></td></tr>
-                        <tr><td class="p-4">AWS Integration / Cache Encryption</td><td class="p-4 text-center"></td><td class="p-4 text-center bg-blue-50/30 text-green-600"><i class="fa-solid fa-check"></i></td></tr>
-                        <tr><td class="p-4">Web Application Firewall (WAF)</td><td class="p-4 text-center"></td><td class="p-4 text-center bg-blue-50/30 font-bold text-blue-700">Add-on</td></tr>
-
-                        <tr class="feature-group-bg"><td class="p-4 font-bold" colspan="3">Scalability & Optimization</td></tr>
-                        <tr><td class="p-4">Dynamic backends</td><td class="p-4 text-center"></td><td class="p-4 text-center bg-blue-50/30 text-green-600"><i class="fa-solid fa-check"></i></td></tr>
-                        <tr><td class="p-4">Persistent disk caching (MSE)</td><td class="p-4 text-center"></td><td class="p-4 text-center bg-blue-50/30 text-green-600"><i class="fa-solid fa-check"></i></td></tr>
-                        <tr><td class="p-4">High Availability (VHA) / Traffic Router</td><td class="p-4 text-center"></td><td class="p-4 text-center bg-blue-50/30 text-green-600"><i class="fa-solid fa-check"></i></td></tr>
-                        <tr><td class="p-4">Parallel ESI / Scalable Invalidation</td><td class="p-4 text-center"></td><td class="p-4 text-center bg-blue-50/30 text-green-600"><i class="fa-solid fa-check"></i></td></tr>
-                        <tr><td class="p-4">WebP / Brotli on-the-fly</td><td class="p-4 text-center"></td><td class="p-4 text-center bg-blue-50/30 text-green-600"><i class="fa-solid fa-check"></i></td></tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        <div class="mt-20">
-            <h2 class="text-2xl font-bold mb-8 text-center">Commercial Support Comparison</h2>
-            <div class="overflow-x-auto bg-white rounded-xl shadow-sm border border-slate-200">
-                <table class="w-full text-left border-collapse">
-                    <thead>
-                        <tr class="bg-slate-50 border-b border-slate-200">
-                            <th class="p-4 font-bold text-slate-500 uppercase text-xs">Support Element</th>
-                            <th class="p-4 font-bold">Cache Support (OSS)</th>
-                            <th class="p-4 font-bold">Standard</th>
-                            <th class="p-4 font-bold text-blue-600">Premium</th>
-                        </tr>
-                    </thead>
-                    <tbody class="text-sm">
-                        <tr class="border-b border-slate-100">
-                            <td class="p-4 font-medium">Requests per Year</td>
-                            <td class="p-4">5</td>
-                            <td class="p-4">20</td>
-                            <td class="p-4 font-bold text-blue-600">Unlimited</td>
-                        </tr>
-                        <tr class="border-b border-slate-100">
-                            <td class="p-4 font-medium">Availability</td>
-                            <td class="p-4">9-5 Business Hours</td>
-                            <td class="p-4">9-5 Business Hours</td>
-                            <td class="p-4 font-bold text-blue-600">24/7/365</td>
-                        </tr>
-                        <tr class="border-b border-slate-100">
-                            <td class="p-4 font-medium">Phone Support</td>
-                            <td class="p-4 text-slate-300">No</td>
-                            <td class="p-4 text-green-600">Yes</td>
-                            <td class="p-4 font-bold text-green-600">Yes</td>
-                        </tr>
-                        <tr class="border-b border-slate-100">
-                            <td class="p-4 font-medium italic">SLA: Severity A Response</td>
-                            <td class="p-4 text-slate-300">No</td>
-                            <td class="p-4">4 Business Hours</td>
-                            <td class="p-4 font-bold text-blue-600">2 Hours</td>
-                        </tr>
-                        <tr class="bg-slate-50/50">
-                            <td class="p-4 font-medium">Varnish Assist+ / Managed</td>
-                            <td class="p-4 text-slate-300">No</td>
-                            <td class="p-4 text-slate-300">No</td>
-                            <td class="p-4 font-bold text-green-600">Available Add-on</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
     </section>
 
     <footer class="py-20 text-center text-slate-400 text-sm">
@@ -242,7 +163,6 @@
                 saasBtn.classList.remove('text-slate-500');
                 selfBtn.classList.remove('bg-white', 'shadow-sm', 'text-blue-600');
                 selfBtn.classList.add('text-slate-500');
-                
                 saasSection.classList.remove('hidden');
                 selfSection.classList.add('hidden');
             } else {
@@ -250,7 +170,6 @@
                 selfBtn.classList.remove('text-slate-500');
                 saasBtn.classList.remove('bg-white', 'shadow-sm', 'text-blue-600');
                 saasBtn.classList.add('text-slate-500');
-
                 selfSection.classList.remove('hidden');
                 saasSection.classList.add('hidden');
             }
