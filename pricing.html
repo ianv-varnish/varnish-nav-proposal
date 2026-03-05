@@ -278,36 +278,36 @@
     </footer>
 
     <script>
-       function showPath(path) {
+  function showPath(path) {
     const saasBtn = document.getElementById('btn-saas');
     const selfBtn = document.getElementById('btn-self');
     const saasSection = document.getElementById('saas-section');
     const selfSection = document.getElementById('self-hosted-section');
 
     if (path === 'saas') {
-        // SaaS becomes Active
+        // 1. Update Buttons: Make SaaS look active, Self-Hosted look inactive
         saasBtn.classList.add('bg-white', 'shadow-sm', 'text-blue-600');
         saasBtn.classList.remove('text-slate-500');
-        // Self-Hosted becomes Inactive
+        
         selfBtn.classList.remove('bg-white', 'shadow-sm', 'text-blue-600');
         selfBtn.classList.add('text-slate-500');
         
+        // 2. Update Sections: Show SaaS, Hide Self-Hosted
         saasSection.classList.remove('hidden');
         selfSection.classList.add('hidden');
     } else {
-        // Self-Hosted becomes Active
+        // 1. Update Buttons: Make Self-Hosted look active, SaaS look inactive
         selfBtn.classList.add('bg-white', 'shadow-sm', 'text-blue-600');
         selfBtn.classList.remove('text-slate-500');
-        // SaaS becomes Inactive
+        
         saasBtn.classList.remove('bg-white', 'shadow-sm', 'text-blue-600');
         saasBtn.classList.add('text-slate-500');
 
+        // 2. Update Sections: Show Self-Hosted, Hide SaaS
         selfSection.classList.remove('hidden');
         saasSection.classList.add('hidden');
     }
 }
-            }
-        }
     </script>
 </body>
 </html>
