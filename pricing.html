@@ -10,6 +10,8 @@
         .gradient-border { border: 2px solid; border-image: linear-gradient(to right, #2563eb, #7c3aed) 1; }
         .tab-active { border-bottom: 3px solid #2563eb; color: #2563eb; }
         .card-shadow:hover { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1); }
+        /* Style for feature table headers */
+        .feature-group-bg { background-color: #f8fafc; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900 font-sans">
@@ -120,6 +122,58 @@
                     <li><i class="fa-solid fa-star text-blue-500 mr-2"></i>Enterprise Security & WAF</li>
                 </ul>
                 <button class="w-full py-3 bg-slate-900 text-white font-bold rounded-lg">Request a Quote</button>
+            </div>
+        </div>
+
+        <div class="mt-20 mb-20">
+            <h2 class="text-3xl font-extrabold text-slate-900 mb-12 text-center">What's Included?</h2>
+            <div class="overflow-x-auto bg-white rounded-xl shadow-sm border border-slate-200">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-slate-50 border-b border-slate-200">
+                            <th class="p-4 text-sm font-bold text-slate-500 uppercase">Core Features</th>
+                            <th class="p-4 text-sm font-bold text-slate-500 uppercase text-center">Varnish Cache (OSS)</th>
+                            <th class="p-4 text-sm font-bold text-blue-600 uppercase text-center bg-blue-50/30">Varnish Enterprise</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-sm divide-y divide-slate-100">
+                        <tr><td class="p-4">HTTP proxy</td><td class="p-4 text-center"></td><td class="p-4 text-center bg-blue-50/30 text-green-600"><i class="fa-solid fa-check"></i></td></tr>
+                        <tr><td class="p-4">Memory caching</td><td class="p-4 text-center"></td><td class="p-4 text-center bg-blue-50/30 text-green-600"><i class="fa-solid fa-check"></i></td></tr>
+                        <tr><td class="p-4">VCL configuration</td><td class="p-4 text-center"></td><td class="p-4 text-center bg-blue-50/30 text-green-600"><i class="fa-solid fa-check"></i></td></tr>
+                        <tr><td class="p-4">Rate limiting</td><td class="p-4 text-center"></td><td class="p-4 text-center bg-blue-50/30 text-green-600"><i class="fa-solid fa-check"></i></td></tr>
+                        
+                        <tr class="feature-group-bg"><td class="p-4 font-bold" colspan="3">Solutions</td></tr>
+                        <tr><td class="p-4">Ecommerce (Magento)</td><td class="p-4 text-center"></td><td class="p-4 text-center bg-blue-50/30 text-green-600"><i class="fa-solid fa-check"></i></td></tr>
+                        <tr><td class="p-4">Content Management System (Drupal, etc)</td><td class="p-4 text-center"></td><td class="p-4 text-center bg-blue-50/30 text-green-600"><i class="fa-solid fa-check"></i></td></tr>
+                        <tr><td class="p-4">Streaming (Media, VOD, Live)</td><td class="p-4 text-center"></td><td class="p-4 text-center bg-blue-50/30 text-green-600"><i class="fa-solid fa-check"></i></td></tr>
+                        <tr><td class="p-4">DIY Content Delivery Network</td><td class="p-4 text-center"></td><td class="p-4 text-center bg-blue-50/30 text-green-600"><i class="fa-solid fa-check"></i></td></tr>
+                        <tr><td class="p-4">DevOps Productivity</td><td class="p-4 text-center"></td><td class="p-4 text-center bg-blue-50/30 text-green-600"><i class="fa-solid fa-check"></i></td></tr>
+                        <tr><td class="p-4">Object Storage Acceleration</td><td class="p-4 text-center"></td><td class="p-4 text-center bg-blue-50/30 text-green-600"><i class="fa-solid fa-check"></i></td></tr>
+                        
+                        <tr class="feature-group-bg"><td class="p-4 font-bold" colspan="3">Support</td></tr>
+                        <tr><td class="p-4">Community support</td><td class="p-4 text-center text-green-600"><i class="fa-solid fa-check"></i></td><td class="p-4 text-center bg-blue-50/30 text-green-600"><i class="fa-solid fa-check"></i></td></tr>
+                        <tr><td class="p-4">Quick start / Optimized instance</td><td class="p-4 text-center"></td><td class="p-4 text-center bg-blue-50/30 text-green-600"><i class="fa-solid fa-check"></i></td></tr>
+                        <tr><td class="p-4">Migration assistance</td><td class="p-4 text-center"></td><td class="p-4 text-center bg-blue-50/30 text-green-600"><i class="fa-solid fa-check"></i></td></tr>
+                        <tr><td class="p-4">Health checks</td><td class="p-4 text-center"></td><td class="p-4 text-center bg-blue-50/30 text-green-600"><i class="fa-solid fa-check"></i></td></tr>
+                        <tr><td class="p-4">Standard support</td><td class="p-4 text-center"></td><td class="p-4 text-center bg-blue-50/30 font-bold text-blue-700">Add-on</td></tr>
+                        <tr><td class="p-4">Premium support</td><td class="p-4 text-center"></td><td class="p-4 text-center bg-blue-50/30 font-bold text-blue-700">Add-on</td></tr>
+                        <tr><td class="p-4">Assist+ / Managed Services</td><td class="p-4 text-center"></td><td class="p-4 text-center bg-blue-50/30 font-bold text-blue-700">Add-on</td></tr>
+
+                        <tr class="feature-group-bg"><td class="p-4 font-bold" colspan="3">Security</td></tr>
+                        <tr><td class="p-4">HTTPs proxy (TLS/SSL)</td><td class="p-4 text-center"></td><td class="p-4 text-center bg-blue-50/30 text-green-600"><i class="fa-solid fa-check"></i></td></tr>
+                        <tr><td class="p-4">JWT / HMAC Signing</td><td class="p-4 text-center"></td><td class="p-4 text-center bg-blue-50/30 text-green-600"><i class="fa-solid fa-check"></i></td></tr>
+                        <tr><td class="p-4">Bot verification</td><td class="p-4 text-center"></td><td class="p-4 text-center bg-blue-50/30 text-green-600"><i class="fa-solid fa-check"></i></td></tr>
+                        <tr><td class="p-4">AWS Integration / Cache Encryption</td><td class="p-4 text-center"></td><td class="p-4 text-center bg-blue-50/30 text-green-600"><i class="fa-solid fa-check"></i></td></tr>
+                        <tr><td class="p-4">Web Application Firewall (WAF)</td><td class="p-4 text-center"></td><td class="p-4 text-center bg-blue-50/30 font-bold text-blue-700">Add-on</td></tr>
+
+                        <tr class="feature-group-bg"><td class="p-4 font-bold" colspan="3">Scalability & Optimization</td></tr>
+                        <tr><td class="p-4">Dynamic backends</td><td class="p-4 text-center"></td><td class="p-4 text-center bg-blue-50/30 text-green-600"><i class="fa-solid fa-check"></i></td></tr>
+                        <tr><td class="p-4">Persistent disk caching (MSE)</td><td class="p-4 text-center"></td><td class="p-4 text-center bg-blue-50/30 text-green-600"><i class="fa-solid fa-check"></i></td></tr>
+                        <tr><td class="p-4">High Availability (VHA) / Traffic Router</td><td class="p-4 text-center"></td><td class="p-4 text-center bg-blue-50/30 text-green-600"><i class="fa-solid fa-check"></i></td></tr>
+                        <tr><td class="p-4">Parallel ESI / Scalable Invalidation</td><td class="p-4 text-center"></td><td class="p-4 text-center bg-blue-50/30 text-green-600"><i class="fa-solid fa-check"></i></td></tr>
+                        <tr><td class="p-4">WebP / Brotli on-the-fly</td><td class="p-4 text-center"></td><td class="p-4 text-center bg-blue-50/30 text-green-600"><i class="fa-solid fa-check"></i></td></tr>
+                    </tbody>
+                </table>
             </div>
         </div>
 
