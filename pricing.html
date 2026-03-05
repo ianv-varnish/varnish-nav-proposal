@@ -20,9 +20,9 @@
         <h1 class="text-4xl font-extrabold mb-4">Powerful Caching, Your Way</h1>
         <p class="text-xl text-slate-600 mb-8 max-w-2xl mx-auto">From open-source developers to global enterprises—choose the deployment that fits your scale.</p>
         
-        <div class="inline-flex p-1 bg-slate-100 rounded-lg">
-<button onclick="showPath('saas')" id="btn-saas" class="px-6 py-2 rounded-md font-semibold text-slate-500 hover:text-slate-700">Managed SaaS (CDN)</button>
-<button onclick="showPath('self')" id="btn-self" class="px-6 py-2 rounded-md font-semibold bg-white shadow-sm text-blue-600">Self-Hosted (Software)</button>
+      <div class="inline-flex p-1 bg-slate-100 rounded-lg">
+            <button onclick="showPath('saas')" id="btn-saas" class="px-6 py-2 rounded-md font-semibold text-slate-500 hover:text-slate-700">Managed SaaS (CDN)</button>
+            <button onclick="showPath('self')" id="btn-self" class="px-6 py-2 rounded-md font-semibold bg-white shadow-sm text-blue-600">Self-Hosted (Software)</button>
         </div>
     </header>
 
@@ -278,36 +278,38 @@
     </footer>
 
     <script>
-  function showPath(path) {
-    const saasBtn = document.getElementById('btn-saas');
-    const selfBtn = document.getElementById('btn-self');
-    const saasSection = document.getElementById('saas-section');
-    const selfSection = document.getElementById('self-hosted-section');
+    function showPath(path) {
+        const saasBtn = document.getElementById('btn-saas');
+        const selfBtn = document.getElementById('btn-self');
+        const saasSection = document.getElementById('saas-section');
+        const selfSection = document.getElementById('self-hosted-section');
 
-    if (path === 'saas') {
-        // 1. Update Buttons: Make SaaS look active, Self-Hosted look inactive
-        saasBtn.classList.add('bg-white', 'shadow-sm', 'text-blue-600');
-        saasBtn.classList.remove('text-slate-500');
-        
-        selfBtn.classList.remove('bg-white', 'shadow-sm', 'text-blue-600');
-        selfBtn.classList.add('text-slate-500');
-        
-        // 2. Update Sections: Show SaaS, Hide Self-Hosted
-        saasSection.classList.remove('hidden');
-        selfSection.classList.add('hidden');
-    } else {
-        // 1. Update Buttons: Make Self-Hosted look active, SaaS look inactive
-        selfBtn.classList.add('bg-white', 'shadow-sm', 'text-blue-600');
-        selfBtn.classList.remove('text-slate-500');
-        
-        saasBtn.classList.remove('bg-white', 'shadow-sm', 'text-blue-600');
-        saasBtn.classList.add('text-slate-500');
+        if (path === 'saas') {
+            // Activate SaaS Button
+            saasBtn.classList.add('bg-white', 'shadow-sm', 'text-blue-600');
+            saasBtn.classList.remove('text-slate-500');
+            
+            // Deactivate Self Button
+            selfBtn.classList.remove('bg-white', 'shadow-sm', 'text-blue-600');
+            selfBtn.classList.add('text-slate-500');
+            
+            // Toggle Sections
+            saasSection.classList.remove('hidden');
+            selfSection.classList.add('hidden');
+        } else {
+            // Activate Self Button
+            selfBtn.classList.add('bg-white', 'shadow-sm', 'text-blue-600');
+            selfBtn.classList.remove('text-slate-500');
+            
+            // Deactivate SaaS Button
+            saasBtn.classList.remove('bg-white', 'shadow-sm', 'text-blue-600');
+            saasBtn.classList.add('text-slate-500');
 
-        // 2. Update Sections: Show Self-Hosted, Hide SaaS
-        selfSection.classList.remove('hidden');
-        saasSection.classList.add('hidden');
+            // Toggle Sections
+            selfSection.classList.remove('hidden');
+            saasSection.classList.add('hidden');
+        }
     }
-}
     </script>
 </body>
 </html>
