@@ -347,3 +347,46 @@
 </div>
     </section>
 
+    </section>
+
+    <footer class="py-20 text-center text-slate-400 text-sm">
+        <p>© 2026 Varnish Software. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showPath(path) {
+            const saasBtn = document.getElementById('btn-saas');
+            const selfBtn = document.getElementById('btn-self');
+            const saasSection = document.getElementById('saas-section');
+            const selfSection = document.getElementById('self-hosted-section');
+
+            if (path === 'saas') {
+                // Activate SaaS Button
+                saasBtn.classList.add('bg-white', 'shadow-sm', 'text-blue-600');
+                saasBtn.classList.remove('text-slate-500');
+                
+                // Deactivate Self Button
+                selfBtn.classList.remove('bg-white', 'shadow-sm', 'text-blue-600');
+                selfBtn.classList.add('text-slate-500');
+                
+                // Toggle Sections
+                saasSection.classList.remove('hidden');
+                selfSection.classList.add('hidden');
+            } else {
+                // Activate Self Button
+                selfBtn.classList.add('bg-white', 'shadow-sm', 'text-blue-600');
+                selfBtn.classList.remove('text-slate-500');
+                
+                // Deactivate SaaS Button
+                saasBtn.classList.remove('bg-white', 'shadow-sm', 'text-blue-600');
+                saasBtn.classList.add('text-slate-500');
+
+                // Toggle Sections
+                selfSection.classList.remove('hidden');
+                saasSection.classList.add('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
+
